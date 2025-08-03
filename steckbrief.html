@@ -14,6 +14,8 @@
 <body class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
     <!-- Animated Background -->
     <div class="absolute inset-0 pointer-events-none">
+        <!-- Circuit Pattern Background -->
+        <div class="absolute inset-0 opacity-10" style="background-image: url('assets/images/circuit-pattern.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
         <div class="absolute top-20 left-20 w-3 h-3 bg-blue-400/40 rounded-full animate-ping" style="animation-delay: 0s; animation-duration: 3s;"></div>
         <div class="absolute top-40 right-32 w-2 h-2 bg-green-400/50 rounded-full animate-ping" style="animation-delay: 1s; animation-duration: 4s;"></div>
         <div class="absolute bottom-40 left-32 w-2.5 h-2.5 bg-purple-400/45 rounded-full animate-ping" style="animation-delay: 2s; animation-duration: 3.5s;"></div>
@@ -48,16 +50,8 @@
                     <!-- Avatar Section -->
                     <div class="flex-shrink-0">
                         <div class="relative">
-                            <!-- Avatar Placeholder - 200x200px empfohlen -->
-                            <div class="w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full border-4 border-gray-600/50 flex items-center justify-center group hover:border-blue-400/50 transition-all duration-300">
-                                <div class="text-center">
-                                    <svg class="w-16 h-16 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                                    </svg>
-                                    <p class="text-xs text-gray-400">Avatar Bild</p>
-                                    <p class="text-xs text-gray-500">200x200px</p>
-                                </div>
-                            </div>
+                            <!-- Avatar Image -->
+                            <img src="assets/images/avatar.jpg" alt="Avatar" class="w-48 h-48 rounded-full object-cover border-4 border-gray-600/50 hover:border-blue-400/50 transition-all duration-300 shadow-2xl">
                             <!-- Status Badge -->
                             <div class="absolute -bottom-2 -right-2 bg-green-500 w-6 h-6 rounded-full border-4 border-gray-800 flex items-center justify-center">
                                 <div class="w-2 h-2 bg-green-300 rounded-full animate-pulse"></div>
@@ -70,10 +64,10 @@
                         <!-- Basic Info -->
                         <div>
                             <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">
-                                [Ihr Name]
+                                Volker Rosin
                             </h2>
                             <p class="text-blue-400 font-medium text-lg mb-4">
-                                [Beruf/Titel]
+                                Elektrotechniker, Planung MSR-Schaltanlagen
                             </p>
                             <p class="text-gray-300 leading-relaxed">
                                 [Kurze Beschreibung über Sie - z.B. "Leidenschaftlicher Entwickler mit Fokus auf Web-Technologien und kreative Lösungen."]
@@ -81,7 +75,7 @@
                         </div>
 
                         <!-- Details Grid -->
-                        <div class="grid md:grid-cols-2 gap-4">
+                        <div class="grid md:grid-cols-3 gap-4">
                             <div class="bg-gray-700/50 rounded-lg p-4">
                                 <div class="flex items-center mb-2">
                                     <svg class="w-5 h-5 text-blue-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,7 +84,7 @@
                                     </svg>
                                     <span class="text-gray-400 text-sm">Standort</span>
                                 </div>
-                                <p class="text-white font-medium">[Ihre Stadt]</p>
+                                <p class="text-white font-medium">Bochum</p>
                             </div>
 
                             <div class="bg-gray-700/50 rounded-lg p-4">
@@ -100,18 +94,9 @@
                                     </svg>
                                     <span class="text-gray-400 text-sm">Erfahrung</span>
                                 </div>
-                                <p class="text-white font-medium">[X Jahre]</p>
+                                <p class="text-white font-medium">25 Jahre Elektrotechnik</p>
                             </div>
 
-                            <div class="bg-gray-700/50 rounded-lg p-4">
-                                <div class="flex items-center mb-2">
-                                    <svg class="w-5 h-5 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                                    </svg>
-                                    <span class="text-gray-400 text-sm">Bildung</span>
-                                </div>
-                                <p class="text-white font-medium">[Abschluss/Ausbildung]</p>
-                            </div>
 
                             <div class="bg-gray-700/50 rounded-lg p-4">
                                 <div class="flex items-center mb-2">
@@ -120,47 +105,12 @@
                                     </svg>
                                     <span class="text-gray-400 text-sm">Hobbys</span>
                                 </div>
-                                <p class="text-white font-medium">[Ihre Interessen]</p>
+                                <p class="text-white font-medium">Elektronik, Softwareentwicklung, KI-Systeme</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Skills Section -->
-                <div class="mt-8 pt-8 border-t border-gray-700/50">
-                    <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
-                        <svg class="w-6 h-6 text-blue-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-                        </svg>
-                        Fähigkeiten & Technologien
-                    </h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                        <div class="bg-gradient-to-r from-blue-500/20 to-blue-600/20 border border-blue-500/30 rounded-lg px-3 py-2 text-center">
-                            <span class="text-blue-300 font-medium">[Skill 1]</span>
-                        </div>
-                        <div class="bg-gradient-to-r from-green-500/20 to-green-600/20 border border-green-500/30 rounded-lg px-3 py-2 text-center">
-                            <span class="text-green-300 font-medium">[Skill 2]</span>
-                        </div>
-                        <div class="bg-gradient-to-r from-purple-500/20 to-purple-600/20 border border-purple-500/30 rounded-lg px-3 py-2 text-center">
-                            <span class="text-purple-300 font-medium">[Skill 3]</span>
-                        </div>
-                        <div class="bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 border border-yellow-500/30 rounded-lg px-3 py-2 text-center">
-                            <span class="text-yellow-300 font-medium">[Skill 4]</span>
-                        </div>
-                        <div class="bg-gradient-to-r from-pink-500/20 to-pink-600/20 border border-pink-500/30 rounded-lg px-3 py-2 text-center">
-                            <span class="text-pink-300 font-medium">[Skill 5]</span>
-                        </div>
-                        <div class="bg-gradient-to-r from-indigo-500/20 to-indigo-600/20 border border-indigo-500/30 rounded-lg px-3 py-2 text-center">
-                            <span class="text-indigo-300 font-medium">[Skill 6]</span>
-                        </div>
-                        <div class="bg-gradient-to-r from-cyan-500/20 to-cyan-600/20 border border-cyan-500/30 rounded-lg px-3 py-2 text-center">
-                            <span class="text-cyan-300 font-medium">[Skill 7]</span>
-                        </div>
-                        <div class="bg-gradient-to-r from-red-500/20 to-red-600/20 border border-red-500/30 rounded-lg px-3 py-2 text-center">
-                            <span class="text-red-300 font-medium">[Skill 8]</span>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- Contact Section -->
                 <div class="mt-8 pt-8 border-t border-gray-700/50">
@@ -171,11 +121,11 @@
                         Kontakt
                     </h3>
                     <div class="flex flex-wrap gap-4">
-                        <a href="mailto:[ihre-email]" class="flex items-center px-4 py-2 bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/30 rounded-lg transition-colors group">
+                        <a href="mailto:v.rosin@email.de" class="flex items-center px-4 py-2 bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/30 rounded-lg transition-colors group">
                             <svg class="w-5 h-5 text-blue-400 mr-2 group-hover:text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
-                            <span class="text-blue-300 group-hover:text-blue-200">[ihre-email]</span>
+                            <span class="text-blue-300 group-hover:text-blue-200">v.rosin@email.de</span>
                         </a>
                         <a href="https://github.com/[username]" target="_blank" class="flex items-center px-4 py-2 bg-gray-600/20 hover:bg-gray-600/30 border border-gray-500/30 rounded-lg transition-colors group">
                             <svg class="w-5 h-5 text-gray-400 mr-2 group-hover:text-gray-300" fill="currentColor" viewBox="0 0 24 24">
@@ -183,16 +133,21 @@
                             </svg>
                             <span class="text-gray-300 group-hover:text-gray-200">GitHub</span>
                         </a>
-                        <a href="https://linkedin.com/in/[username]" target="_blank" class="flex items-center px-4 py-2 bg-blue-700/20 hover:bg-blue-700/30 border border-blue-600/30 rounded-lg transition-colors group">
-                            <svg class="w-5 h-5 text-blue-400 mr-2 group-hover:text-blue-300" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                            <span class="text-blue-300 group-hover:text-blue-200">LinkedIn</span>
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <footer class="mt-16 p-6 text-center text-gray-500 text-sm space-y-2">
+        <div>
+            <a href="kontakt.html" class="hover:text-gray-400 transition-colors">Kontakt</a>
+            <span class="mx-2">|</span>
+            <a href="impressum.html" class="hover:text-gray-400 transition-colors">Impressum</a>
+            <span class="mx-2">|</span>
+            <a href="datenschutz.html" class="hover:text-gray-400 transition-colors">Datenschutz</a>
+        </div>
+        <div>Powered by Tailwind CSS</div>
+    </footer>
 </body>
 </html>

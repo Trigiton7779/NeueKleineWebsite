@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektronik-Basteleien - Tech & Tüfteleien</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <script src="js/config-loader.js"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative">
+    <!-- Animated Background -->
+    <div class="absolute inset-0 pointer-events-none">
+        <!-- Circuit Pattern Background -->
+        <div class="absolute inset-0 opacity-10" style="background-image: url('assets/images/circuit-pattern.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+        <div class="absolute top-20 left-20 w-3 h-3 bg-blue-400/40 rounded-full animate-ping" style="animation-delay: 0s; animation-duration: 3s;"></div>
+        <div class="absolute top-40 right-32 w-2 h-2 bg-green-400/50 rounded-full animate-ping" style="animation-delay: 1s; animation-duration: 4s;"></div>
+        <div class="absolute bottom-40 left-32 w-2.5 h-2.5 bg-purple-400/45 rounded-full animate-ping" style="animation-delay: 2s; animation-duration: 3.5s;"></div>
+        <div class="absolute bottom-20 right-20 w-2 h-2 bg-blue-300/35 rounded-full animate-ping" style="animation-delay: 3s; animation-duration: 4.5s;"></div>
+        <div class="absolute top-60 left-1/2 w-1.5 h-1.5 bg-green-300/40 rounded-full animate-ping" style="animation-delay: 1.5s; animation-duration: 3.2s;"></div>
+        <div class="absolute bottom-60 right-1/3 w-3 h-3 bg-purple-300/35 rounded-full animate-ping" style="animation-delay: 2.5s; animation-duration: 4.2s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="p-6 relative z-10">
+        <a href="index.html" class="text-blue-400 hover:text-blue-300 transition-colors">← Zurück zur Startseite</a>
+    </nav>
+
+    <div class="container mx-auto px-6 py-8 relative z-10">
+        <div class="max-w-6xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="text-6xl mb-4">🔧</div>
+                <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent mb-4">
+                    Elektronik-Basteleien
+                </h1>
+                <p class="text-gray-300 text-lg">Hardware-Projekte, Schaltungen und elektronische Experimente</p>
+            </div>
+
+            <!-- Projekt-Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                
+                <!-- Arduino Projekte -->
+                <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">Arduino-Projekte</h3>
+                            <span class="inline-block px-2 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full mt-1">Geplant</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Microcontroller-basierte Projekte für Sensoren, Aktoren und IoT-Anwendungen.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-300 text-xs">Arduino</span>
+                        <span class="px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-300 text-xs">ESP32</span>
+                        <span class="px-2 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-300 text-xs">C++</span>
+                    </div>
+                </div>
+
+                <!-- Raspberry Pi -->
+                <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">Raspberry Pi</h3>
+                            <span class="inline-block px-2 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full mt-1">Konzept</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Single-Board-Computer für komplexere Anwendungen und Datenverarbeitung.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-300 text-xs">Raspberry Pi</span>
+                        <span class="px-2 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-300 text-xs">Python</span>
+                        <span class="px-2 py-1 bg-red-500/20 border border-red-500/30 rounded text-red-300 text-xs">Linux</span>
+                    </div>
+                </div>
+
+                <!-- PCB Design -->
+                <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v1m0 0h6m-6 0V5a2 2 0 012-2h4a2 2 0 012 2v1m0 0V5a2 2 0 012-2h2a2 2 0 012 2v12a4 4 0 01-4 4h-2a2 2 0 01-2-2v-1"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">PCB-Design</h3>
+                            <span class="inline-block px-2 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full mt-1">Lernphase</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Platinen-Design und Fertigung für eigene elektronische Schaltungen.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-300 text-xs">KiCad</span>
+                        <span class="px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-300 text-xs">Eagle</span>
+                        <span class="px-2 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-300 text-xs">Altium</span>
+                    </div>
+                </div>
+
+                <!-- Sensoren & Aktoren -->
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/30 shadow-2xl border-dashed">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-400">Sensoren & Aktoren</h3>
+                            <span class="inline-block px-2 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full mt-1">Sammlung</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Experimente mit verschiedenen Sensoren und Ausgabe-Komponenten.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-gray-500/20 border border-gray-500/30 rounded text-gray-400 text-xs">Temperature</span>
+                        <span class="px-2 py-1 bg-gray-500/20 border border-gray-500/30 rounded text-gray-400 text-xs">LEDs</span>
+                        <span class="px-2 py-1 bg-gray-500/20 border border-gray-500/30 rounded text-gray-400 text-xs">Servos</span>
+                    </div>
+                </div>
+
+                <!-- 3D-Druck -->
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/30 shadow-2xl border-dashed">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-400">3D-Druck Gehäuse</h3>
+                            <span class="inline-block px-2 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full mt-1">Idee</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Custom Gehäuse und mechanische Teile für Elektronik-Projekte.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-gray-500/20 border border-gray-500/30 rounded text-gray-400 text-xs">Fusion 360</span>
+                        <span class="px-2 py-1 bg-gray-500/20 border border-gray-500/30 rounded text-gray-400 text-xs">Tinkercad</span>
+                        <span class="px-2 py-1 bg-gray-500/20 border border-gray-500/30 rounded text-gray-400 text-xs">PLA</span>
+                    </div>
+                </div>
+
+                <!-- MSR-Prototyping -->
+                <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/30 shadow-2xl border-dashed">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100-4m0 4v2m0-6V4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-400">MSR-Prototyping</h3>
+                            <span class="inline-block px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full mt-1">Beruflich</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Prototypen für MSR-Anwendungen und Steuerungstechnik-Tests.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 bg-gray-500/20 border border-gray-500/30 rounded text-gray-400 text-xs">Modbus</span>
+                        <span class="px-2 py-1 bg-gray-500/20 border border-gray-500/30 rounded text-gray-400 text-xs">4-20mA</span>
+                        <span class="px-2 py-1 bg-gray-500/20 border border-gray-500/30 rounded text-gray-400 text-xs">Relais</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Werkzeuge & Equipment -->
+            <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 shadow-2xl">
+                <h2 class="text-2xl font-semibold text-white mb-6 text-center">Werkzeuge & Equipment</h2>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+                    <div class="bg-gradient-to-br from-red-500/20 to-red-600/20 border border-red-500/30 rounded-lg p-3 text-center">
+                        <div class="text-2xl mb-1">🔥</div>
+                        <span class="text-red-300 font-medium text-sm">Lötstation</span>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30 rounded-lg p-3 text-center">
+                        <div class="text-2xl mb-1">📊</div>
+                        <span class="text-blue-300 font-medium text-sm">Multimeter</span>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-500/20 to-green-600/20 border border-green-500/30 rounded-lg p-3 text-center">
+                        <div class="text-2xl mb-1">〰️</div>
+                        <span class="text-green-300 font-medium text-sm">Oszilloskop</span>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-500/20 to-purple-600/20 border border-purple-500/30 rounded-lg p-3 text-center">
+                        <div class="text-2xl mb-1">🔌</div>
+                        <span class="text-purple-300 font-medium text-sm">Steckbretter</span>
+                    </div>
+                    <div class="bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 border border-yellow-500/30 rounded-lg p-3 text-center">
+                        <div class="text-2xl mb-1">⚡</div>
+                        <span class="text-yellow-300 font-medium text-sm">Netzteil</span>
+                    </div>
+                    <div class="bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 border border-cyan-500/30 rounded-lg p-3 text-center">
+                        <div class="text-2xl mb-1">🔧</div>
+                        <span class="text-cyan-300 font-medium text-sm">Werkzeugset</span>
+                    </div>
+                    <div class="bg-gradient-to-br from-pink-500/20 to-pink-600/20 border border-pink-500/30 rounded-lg p-3 text-center">
+                        <div class="text-2xl mb-1">📦</div>
+                        <span class="text-pink-300 font-medium text-sm">Bauteile-Box</span>
+                    </div>
+                    <div class="bg-gradient-to-br from-indigo-500/20 to-indigo-600/20 border border-indigo-500/30 rounded-lg p-3 text-center">
+                        <div class="text-2xl mb-1">💾</div>
+                        <span class="text-indigo-300 font-medium text-sm">Programmer</span>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-gray-400 text-sm">Learning by doing - vom Breadboard zum eigenen PCB</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-16 p-6 text-center text-gray-500 text-sm space-y-2">
+        <div>
+            <a href="kontakt.html" class="hover:text-gray-400 transition-colors">Kontakt</a>
+            <span class="mx-2">|</span>
+            <a href="impressum.html" class="hover:text-gray-400 transition-colors">Impressum</a>
+            <span class="mx-2">|</span>
+            <a href="datenschutz.html" class="hover:text-gray-400 transition-colors">Datenschutz</a>
+        </div>
+        <div>Powered by Tailwind CSS</div>
+    </footer>
+</body>
+</html>

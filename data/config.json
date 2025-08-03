@@ -1,0 +1,50 @@
+{
+  "personal": {
+    "name": "Volker Rosin",
+    "title": "Elektrotechniker, Planung MSR-Schaltanlagen",
+    "description": "Beruflich Elektrotechniker, privat Tüftler und Tech-Enthusiast. Zwischen Schaltplänen und Code entstehen hier meine digitalen Experimente.",
+    "location": "Bochum",
+    "country": "Deutschland",
+    "experience": "25 Jahre Elektrotechnik",
+    "age": "48 Jahre",
+    "hobbies": "Elektronik, Softwareentwicklung, KI-Systeme"
+  },
+  "contact": {
+    "email": "v.rosin@email.de",
+    "phone": "[Telefonnummer auf Anfrage]",
+    "address": {
+      "street": "[Straße und Hausnummer]",
+      "postal": "[PLZ]",
+      "city": "Bochum",
+      "country": "Deutschland"
+    }
+  },
+  "interests": [
+    "Software-Entwicklung",
+    "Elektronik-Projekte", 
+    "KI-Experimente",
+    "Retro-Computing",
+    "Fintech & Trading",
+    "MSR-Technik",
+    "Arduino & Raspberry Pi",
+    "Automatisierung"
+  ],
+  "social": {
+    "github": "https://github.com/[username]",
+    "linkedin": "",
+    "website": ""
+  },
+  "site": {
+    "title": "Tech & Tüfteleien",
+    "subtitle": "Von MSR-Schaltanlagen bis Retro-Computing",
+    "description": "Meine Welt aus Software-Projekten, Elektronik-Basteleien, KI-Experimenten und allem was zwischen 0 und 1 passiert",
+    "footer": "Powered by Tailwind CSS",
+    "lastUpdated": "Januar 2025"
+  },
+  "legal": {
+    "companyName": "Volker Rosin",
+    "businessType": "Elektrotechniker, Planung MSR-Schaltanlagen",
+    "vatId": "",
+    "commercialRegister": ""
+  }
+}

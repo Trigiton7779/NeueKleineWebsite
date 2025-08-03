@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro-Emulatoren - Tech & Tüfteleien</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <script src="js/config-loader.js"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative">
+    <!-- Animated Background -->
+    <div class="absolute inset-0 pointer-events-none">
+        <!-- Circuit Pattern Background -->
+        <div class="absolute inset-0 opacity-10" style="background-image: url('assets/images/circuit-pattern.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+        <div class="absolute top-20 left-20 w-3 h-3 bg-blue-400/40 rounded-full animate-ping" style="animation-delay: 0s; animation-duration: 3s;"></div>
+        <div class="absolute top-40 right-32 w-2 h-2 bg-green-400/50 rounded-full animate-ping" style="animation-delay: 1s; animation-duration: 4s;"></div>
+        <div class="absolute bottom-40 left-32 w-2.5 h-2.5 bg-purple-400/45 rounded-full animate-ping" style="animation-delay: 2s; animation-duration: 3.5s;"></div>
+        <div class="absolute bottom-20 right-20 w-2 h-2 bg-blue-300/35 rounded-full animate-ping" style="animation-delay: 3s; animation-duration: 4.5s;"></div>
+        <div class="absolute top-60 left-1/2 w-1.5 h-1.5 bg-green-300/40 rounded-full animate-ping" style="animation-delay: 1.5s; animation-duration: 3.2s;"></div>
+        <div class="absolute bottom-60 right-1/3 w-3 h-3 bg-purple-300/35 rounded-full animate-ping" style="animation-delay: 2.5s; animation-duration: 4.2s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="p-6 relative z-10">
+        <a href="retro-computing.html" class="text-blue-400 hover:text-blue-300 transition-colors">← Zurück zu Retro-Computing</a>
+    </nav>
+
+    <div class="container mx-auto px-6 py-8 relative z-10">
+        <div class="max-w-6xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <div class="text-6xl mb-4">💾</div>
+                <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 bg-clip-text text-transparent mb-4">
+                    Retro-Emulatoren
+                </h1>
+                <p class="text-gray-300 text-lg">Die besten Emulatoren für klassische Computer und Konsolen</p>
+            </div>
+
+            <!-- Computer-Emulatoren -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-semibold text-white mb-6 flex items-center">
+                    <div class="text-3xl mr-3">🖥️</div>
+                    Computer-Emulatoren
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- VICE (C64) -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-12 bg-gradient-to-br from-brown-500/20 to-yellow-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <img src="assets/images/GUT_C64_KLEIN.webp" alt="Commodore 64" class="w-14 h-10 object-cover rounded">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">VICE</h3>
+                                <span class="text-yellow-300 text-sm">Commodore 64/128</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-4">
+                            Der definitive Commodore 64 Emulator. Unterstützt C64, C128, VIC-20, PET und Plus/4. Sehr accurate Emulation.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-300 text-xs">Windows</span>
+                            <span class="px-2 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-300 text-xs">macOS</span>
+                            <span class="px-2 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-300 text-xs">Linux</span>
+                        </div>
+                        <a href="https://vice-emu.sourceforge.io/" target="_blank" rel="noopener" 
+                           class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm">
+                            <span>Website besuchen</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- WinUAE (Amiga) -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-12 bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <img src="assets/images/GUT_AMIGA_KLEIN.webp" alt="Amiga 500" class="w-14 h-10 object-cover rounded">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">WinUAE</h3>
+                                <span class="text-red-300 text-sm">Amiga 500/1200/4000</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-4">
+                            Perfekte Amiga-Emulation für Windows. Unterstützt alle Amiga-Modelle mit originalgetreuer Hardware-Simulation.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-300 text-xs">Windows</span>
+                            <span class="px-2 py-1 bg-yellow-500/20 border border-yellow-500/30 rounded text-yellow-300 text-xs">Kickstart ROMs</span>
+                        </div>
+                        <a href="https://www.winuae.net/" target="_blank" rel="noopener" 
+                           class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm">
+                            <span>Website besuchen</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Hatari (Atari ST) -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-12 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <img src="assets/images/GUT_ATARIST_KLEIN.webp" alt="Atari ST" class="w-14 h-10 object-cover rounded">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Hatari</h3>
+                                <span class="text-green-300 text-sm">Atari ST/STE/TT/Falcon</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-4">
+                            Hochgenauer Atari ST Emulator. Unterstützt alle ST-Modelle und viele Hardware-Erweiterungen.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-300 text-xs">Windows</span>
+                            <span class="px-2 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-300 text-xs">macOS</span>
+                            <span class="px-2 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-300 text-xs">Linux</span>
+                        </div>
+                        <a href="https://hatari.tuxfamily.org/" target="_blank" rel="noopener" 
+                           class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm">
+                            <span>Website besuchen</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- DOSBox -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <img src="assets/images/GUT_MSDOS_KLEIN.webp" alt="MS-DOS PC" class="w-14 h-10 object-cover rounded">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">DOSBox</h3>
+                                <span class="text-cyan-300 text-sm">MS-DOS</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-4">
+                            Der Standard für DOS-Spiele. Emuliert x86 PC mit DOS für klassische PC-Spiele der 80er und 90er.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-300 text-xs">Windows</span>
+                            <span class="px-2 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-300 text-xs">macOS</span>
+                            <span class="px-2 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-300 text-xs">Linux</span>
+                        </div>
+                        <a href="https://www.dosbox.com/" target="_blank" rel="noopener" 
+                           class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm">
+                            <span>Website besuchen</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- AppleWin -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-12 bg-gradient-to-br from-gray-500/20 to-slate-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <img src="assets/images/GUT_APPLE2_KLEIN.webp" alt="Apple II" class="w-14 h-10 object-cover rounded">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">AppleWin</h3>
+                                <span class="text-gray-300 text-sm">Apple II</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-4">
+                            Authentischer Apple II Emulator für Windows. Unterstützt Apple II, II+ und IIe mit vielen Peripheriegeräten.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-300 text-xs">Windows</span>
+                            <span class="px-2 py-1 bg-orange-500/20 border border-orange-500/30 rounded text-orange-300 text-xs">Open Source</span>
+                        </div>
+                        <a href="https://github.com/AppleWin/AppleWin" target="_blank" rel="noopener" 
+                           class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm">
+                            <span>GitHub besuchen</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- MAME -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-12 bg-gradient-to-br from-purple-500/20 to-violet-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <img src="assets/images/GUT_MAME_KLEIN.webp" alt="Arcade Machine" class="w-14 h-10 object-cover rounded">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">MAME</h3>
+                                <span class="text-purple-300 text-sm">Arcade & Computer</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-4">
+                            Multiple Arcade Machine Emulator. Unterstützt tausende von Arcade-Automaten und verschiedene Computer.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-300 text-xs">Windows</span>
+                            <span class="px-2 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-300 text-xs">macOS</span>
+                            <span class="px-2 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-300 text-xs">Linux</span>
+                        </div>
+                        <a href="https://www.mamedev.org/" target="_blank" rel="noopener" 
+                           class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm">
+                            <span>Website besuchen</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Konsolen-Emulatoren -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-semibold text-white mb-6 flex items-center">
+                    <div class="text-3xl mr-3">🎮</div>
+                    Konsolen-Emulatoren
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- RetroArch -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">🎮</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">RetroArch</h3>
+                                <span class="text-orange-300 text-sm">Multi-System</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-4">
+                            Universal-Frontend für viele Emulatoren. Eine Oberfläche für NES, SNES, GameBoy, Genesis und viele mehr.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-300 text-xs">Windows</span>
+                            <span class="px-2 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-300 text-xs">macOS</span>
+                            <span class="px-2 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-300 text-xs">Linux</span>
+                            <span class="px-2 py-1 bg-red-500/20 border border-red-500/30 rounded text-red-300 text-xs">Mobile</span>
+                        </div>
+                        <a href="https://www.retroarch.com/" target="_blank" rel="noopener" 
+                           class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm">
+                            <span>Website besuchen</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Dolphin (GameCube/Wii) -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">🐬</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Dolphin</h3>
+                                <span class="text-blue-300 text-sm">GameCube/Wii</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-4">
+                            Hervorragender GameCube und Wii Emulator. Unterstützt HD-Grafik und viele Verbesserungen gegenüber der Original-Hardware.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-300 text-xs">Windows</span>
+                            <span class="px-2 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-300 text-xs">macOS</span>
+                            <span class="px-2 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-300 text-xs">Linux</span>
+                        </div>
+                        <a href="https://dolphin-emu.org/" target="_blank" rel="noopener" 
+                           class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm">
+                            <span>Website besuchen</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- PCSX2 (PlayStation 2) -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">🎯</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">PCSX2</h3>
+                                <span class="text-indigo-300 text-sm">PlayStation 2</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-4">
+                            PlayStation 2 Emulator mit sehr hoher Kompatibilität. Unterstützt die meisten PS2-Spiele mit verschiedenen Verbesserungen.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-300 text-xs">Windows</span>
+                            <span class="px-2 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-300 text-xs">macOS</span>
+                            <span class="px-2 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-300 text-xs">Linux</span>
+                        </div>
+                        <a href="https://pcsx2.net/" target="_blank" rel="noopener" 
+                           class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm">
+                            <span>Website besuchen</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- ePSXe (PlayStation 1) -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-gray-500/20 to-slate-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">💿</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">ePSXe</h3>
+                                <span class="text-gray-300 text-sm">PlayStation 1</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-4">
+                            Populärer PlayStation 1 Emulator. Gute Kompatibilität und Performance für die meisten PSX-Klassiker.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-300 text-xs">Windows</span>
+                            <span class="px-2 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-300 text-xs">Linux</span>
+                            <span class="px-2 py-1 bg-red-500/20 border border-red-500/30 rounded text-red-300 text-xs">Android</span>
+                        </div>
+                        <a href="https://www.epsxe.com/" target="_blank" rel="noopener" 
+                           class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm">
+                            <span>Website besuchen</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Project64 (Nintendo 64) -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">🎲</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">Project64</h3>
+                                <span class="text-red-300 text-sm">Nintendo 64</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-4">
+                            Einer der besten N64-Emulatoren für Windows. Hohe Kompatibilität mit den meisten Nintendo 64 Spielen.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-300 text-xs">Windows</span>
+                            <span class="px-2 py-1 bg-orange-500/20 border border-orange-500/30 rounded text-orange-300 text-xs">Open Source</span>
+                        </div>
+                        <a href="https://www.pj64-emu.com/" target="_blank" rel="noopener" 
+                           class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm">
+                            <span>Website besuchen</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- VisualBoyAdvance (Game Boy) -->
+                    <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <span class="text-2xl">📱</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white">VBA-M</h3>
+                                <span class="text-green-300 text-sm">Game Boy (Advance)</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-sm mb-4">
+                            VisualBoyAdvance-M emuliert Game Boy, Game Boy Color und Game Boy Advance. Sehr gute Kompatibilität.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-green-500/20 border border-green-500/30 rounded text-green-300 text-xs">Windows</span>
+                            <span class="px-2 py-1 bg-blue-500/20 border border-blue-500/30 rounded text-blue-300 text-xs">macOS</span>
+                            <span class="px-2 py-1 bg-purple-500/20 border border-purple-500/30 rounded text-purple-300 text-xs">Linux</span>
+                        </div>
+                        <a href="https://vba-m.com/" target="_blank" rel="noopener" 
+                           class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm">
+                            <span>Website besuchen</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info-Box -->
+            <div class="bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-6">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mr-4">
+                        <div class="w-8 h-8 bg-yellow-500/20 rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-yellow-400 mb-2">Rechtlicher Hinweis</h3>
+                        <p class="text-yellow-200 text-sm leading-relaxed">
+                            Emulatoren selbst sind legal, jedoch benötigen Sie original BIOS-Dateien und ROMs/ISOs der Spiele, die Sie besitzen. 
+                            Das Herunterladen von ROMs urheberrechtlich geschützter Spiele ohne Besitz des Originals ist illegal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-16 p-6 text-center text-gray-500 text-sm space-y-2">
+        <div>
+            <a href="kontakt.html" class="hover:text-gray-400 transition-colors">Kontakt</a>
+            <span class="mx-2">|</span>
+            <a href="impressum.html" class="hover:text-gray-400 transition-colors">Impressum</a>
+            <span class="mx-2">|</span>
+            <a href="datenschutz.html" class="hover:text-gray-400 transition-colors">Datenschutz</a>
+        </div>
+        <div>Powered by Tailwind CSS</div>
+    </footer>
+</body>
+</html>
