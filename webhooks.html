@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webhook Tests - n8n Integration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+    <!-- Navigation -->
+    <nav class="p-6">
+        <a href="index.html" class="text-blue-400 hover:text-blue-300 transition-colors">← Zurück zur Startseite</a>
+    </nav>
+
+    <div class="container mx-auto px-6 py-8">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-green-400 bg-clip-text text-transparent mb-4">
+                    n8n Webhook Tests
+                </h1>
+                <p class="text-gray-300 text-lg">Testen Sie Ihre n8n Webhook-Integrationen</p>
+            </div>
+
+            <!-- Webhook Configuration -->
+            <div class="bg-gray-800 rounded-lg p-6 mb-8 border border-gray-700">
+                <h2 class="text-xl font-semibold mb-4 text-green-400">Webhook Konfiguration</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">n8n Webhook URL</label>
+                        <input type="url" id="webhookUrl" placeholder="https://your-n8n-instance.com/webhook/your-webhook-id" 
+                               class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">HTTP Method</label>
+                        <select id="httpMethod" class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="POST">POST</option>
+                            <option value="GET">GET</option>
+                            <option value="PUT">PUT</option>
+                            <option value="PATCH">PATCH</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Test Forms -->
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <!-- Simple Test -->
+                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+                    <h3 class="text-lg font-semibold mb-4 text-blue-400">Einfacher Test</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Test Nachricht</label>
+                            <input type="text" id="simpleMessage" value="Hallo von der Website!" 
+                                   class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <button onclick="sendSimpleTest()" 
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors">
+                            Test senden
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Form Data Test -->
+                <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+                    <h3 class="text-lg font-semibold mb-4 text-purple-400">Formular Test</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                            <input type="text" id="formName" placeholder="Ihr Name" 
+                                   class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                            <input type="email" id="formEmail" placeholder="ihre@email.de" 
+                                   class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        <button onclick="sendFormTest()" 
+                                class="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-md transition-colors">
+                            Formular senden
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom JSON Test -->
+            <div class="bg-gray-800 rounded-lg p-6 mb-8 border border-gray-700">
+                <h3 class="text-lg font-semibold mb-4 text-green-400">Custom JSON Test</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">JSON Payload</label>
+                        <textarea id="jsonPayload" rows="6" 
+                                  class="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white font-mono text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                                  placeholder='{"key": "value", "timestamp": "2023-01-01T00:00:00Z"}'>{
+  "test": true,
+  "message": "Custom webhook test",
+  "timestamp": new Date().toISOString(),
+  "source": "website"
+}</textarea>
+                    </div>
+                    <button onclick="sendJsonTest()" 
+                            class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition-colors">
+                        JSON senden
+                    </button>
+                </div>
+            </div>
+
+            <!-- Response Area -->
+            <div class="bg-gray-800 rounded-lg p-6 border border-gray-700">
+                <h3 class="text-lg font-semibold mb-4 text-yellow-400">Response Log</h3>
+                <div id="responseLog" class="bg-gray-900 rounded p-4 min-h-32 font-mono text-sm text-gray-300 overflow-auto">
+                    Hier werden die Webhook-Antworten angezeigt...
+                </div>
+                <button onclick="clearLog()" 
+                        class="mt-4 bg-gray-600 hover:bg-gray-700 text-white font-medium py-1 px-3 rounded text-sm transition-colors">
+                    Log löschen
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function getWebhookUrl() {
+            const url = document.getElementById('webhookUrl').value;
+            if (!url) {
+                logResponse('❌ Bitte n8n Webhook URL eingeben');
+                return null;
+            }
+            return url;
+        }
+
+        function getHttpMethod() {
+            return document.getElementById('httpMethod').value;
+        }
+
+        function logResponse(message) {
+            const log = document.getElementById('responseLog');
+            const timestamp = new Date().toLocaleTimeString();
+            log.innerHTML += `[${timestamp}] ${message}\n`;
+            log.scrollTop = log.scrollHeight;
+        }
+
+        async function sendWebhook(data, contentType = 'application/json') {
+            const url = getWebhookUrl();
+            if (!url) return;
+
+            const method = getHttpMethod();
+            
+            try {
+                logResponse(`📤 Sende ${method} Request an ${url}`);
+                
+                const options = {
+                    method: method,
+                    headers: {
+                        'Content-Type': contentType
+                    }
+                };
+
+                if (method !== 'GET' && data) {
+                    options.body = typeof data === 'string' ? data : JSON.stringify(data);
+                }
+
+                const response = await fetch(url, options);
+                const responseText = await response.text();
+                
+                logResponse(`✅ Status: ${response.status} ${response.statusText}`);
+                logResponse(`📥 Response: ${responseText || 'Keine Antwort'}`);
+                
+            } catch (error) {
+                logResponse(`❌ Fehler: ${error.message}`);
+            }
+        }
+
+        function sendSimpleTest() {
+            const message = document.getElementById('simpleMessage').value;
+            sendWebhook({ message: message, type: 'simple_test' });
+        }
+
+        function sendFormTest() {
+            const name = document.getElementById('formName').value;
+            const email = document.getElementById('formEmail').value;
+            
+            if (!name || !email) {
+                logResponse('❌ Bitte alle Formularfelder ausfüllen');
+                return;
+            }
+            
+            sendWebhook({
+                name: name,
+                email: email,
+                type: 'form_test',
+                timestamp: new Date().toISOString()
+            });
+        }
+
+        function sendJsonTest() {
+            const jsonText = document.getElementById('jsonPayload').value;
+            
+            try {
+                const jsonData = JSON.parse(jsonText);
+                sendWebhook(jsonData);
+            } catch (error) {
+                logResponse(`❌ Ungültiges JSON: ${error.message}`);
+            }
+        }
+
+        function clearLog() {
+            document.getElementById('responseLog').innerHTML = 'Log gelöscht...\n';
+        }
+
+        // Set default JSON with current timestamp
+        document.addEventListener('DOMContentLoaded', function() {
+            const defaultJson = {
+                "test": true,
+                "message": "Custom webhook test",
+                "timestamp": new Date().toISOString(),
+                "source": "website"
+            };
+            document.getElementById('jsonPayload').value = JSON.stringify(defaultJson, null, 2);
+        });
+    </script>
+</body>
+</html>
