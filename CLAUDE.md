@@ -36,6 +36,12 @@ This is a comprehensive multi-page static HTML website project serving as a pers
 - `assets/images/avatar.jpg` - Profile image (200x200px)
 - `assets/images/circuit-pattern.webp` - Optimized background pattern (81KB)
 - `assets/images/circuit-pattern.png` - Original background pattern (1.55MB, kept as backup)
+- `assets/images/GUT_C64_KLEIN.webp` - Commodore 64 computer image (320x240px optimized)
+- `assets/images/GUT_AMIGA_KLEIN.webp` - Amiga 500 computer image (320x240px optimized)
+- `assets/images/GUT_ATARIST_KLEIN.webp` - Atari ST computer image (320x240px optimized)
+- `assets/images/GUT_MSDOS_KLEIN.webp` - MS-DOS PC image (320x240px optimized)
+- `assets/images/GUT_APPLE2_KLEIN.webp` - Apple II computer image (320x240px optimized)
+- `assets/images/GUT_MAME_KLEIN.webp` - Arcade machine image (320x240px optimized)
 
 ## Development Commands
 
@@ -185,6 +191,7 @@ All personal data is centralized in `data/config.json`:
 - **WebP Format**: Use circuit-pattern.webp (81KB) for production
 - **PNG Backup**: Keep circuit-pattern.png (1.55MB) as source
 - **Avatar**: 200x200px JPEG for profile image
+- **Retro Hardware Icons**: 320x240px WebP images optimized for web use
 - **Compression**: Maintain quality while optimizing file size
 
 ### Background Pattern Usage:
@@ -195,6 +202,20 @@ background-position: center;
 background-repeat: no-repeat;
 opacity: 10%;
 ```
+
+### Retro Hardware Icon Implementation:
+```html
+<!-- Container maintains 4:3 aspect ratio -->
+<div class="w-16 h-12 bg-gradient-to-br from-color/20 to-color/20 rounded-lg flex items-center justify-center mr-4">
+    <img src="assets/images/GUT_DEVICE_KLEIN.webp" alt="Device Name" class="w-14 h-10 object-cover rounded">
+</div>
+```
+
+**Icon Specifications:**
+- **Container Size**: 64x48px (w-16 h-12) - maintains 4:3 ratio
+- **Image Size**: 56x40px (w-14 h-10) - preserves original proportions
+- **Source Resolution**: 320x240px WebP optimized images
+- **Usage**: Computer/device icons in retro-emulatoren.html
 
 ## Navigation Architecture
 
