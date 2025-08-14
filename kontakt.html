@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt - Volker Rosin</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
         }
     </script>
+    <script src="js/config-loader.js" defer></script>
+    <script src="js/components.js" defer></script>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-black via-gray-900 to-gray-950 text-white relative">
     <!-- Animated Background -->
@@ -44,7 +48,7 @@
                 <div class="bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 shadow-2xl">
                     <h2 class="text-2xl font-semibold text-blue-400 mb-6">Nachricht senden</h2>
                     
-                    <form id="contactForm" class="space-y-6">
+                    <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6">
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name *</label>
@@ -94,51 +98,35 @@
         </div>
     </div>
 
-    <footer class="mt-16 p-6 text-center text-gray-500 text-sm space-y-2">
-        <div>
-            <a href="kontakt.html" class="hover:text-gray-400 transition-colors">Kontakt</a>
-            <span class="mx-2">|</span>
-            <a href="impressum.html" class="hover:text-gray-400 transition-colors">Impressum</a>
-            <span class="mx-2">|</span>
-            <a href="datenschutz.html" class="hover:text-gray-400 transition-colors">Datenschutz</a>
-        </div>
-        <div>Powered by Tailwind CSS</div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
-            
+
             const formMessage = document.getElementById('formMessage');
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            const privacy = document.getElementById('privacy').checked;
-            
-            // Validation
-            if (!name || !email || !message || !privacy) {
+            formMessage.classList.add('hidden');
+
+            try {
+                const response = await fetch(e.target.action, {
+                    method: 'POST',
+                    body: new FormData(e.target),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    formMessage.className = 'mt-4 p-4 rounded-lg bg-green-500/20 border border-green-500/30 text-green-300';
+                    formMessage.textContent = 'Nachricht erfolgreich gesendet.';
+                    formMessage.classList.remove('hidden');
+                    e.target.reset();
+                } else {
+                    throw new Error('Server error');
+                }
+            } catch (err) {
                 formMessage.className = 'mt-4 p-4 rounded-lg bg-red-500/20 border border-red-500/30 text-red-300';
-                formMessage.textContent = 'Bitte füllen Sie alle Pflichtfelder aus und akzeptieren Sie die Datenschutzerklärung.';
+                formMessage.textContent = 'Nachricht konnte nicht gesendet werden.';
                 formMessage.classList.remove('hidden');
-                return;
             }
-            
-            // Create mailto link
-            const mailtoSubject = subject || 'Kontaktanfrage von der Website';
-            const mailtoBody = `Hallo Volker,\n\n${message}\n\nBeste Grüße,\n${name}\n\nE-Mail: ${email}`;
-            const mailtoLink = `mailto:v.rosin@email.de?subject=${encodeURIComponent(mailtoSubject)}&body=${encodeURIComponent(mailtoBody)}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            formMessage.className = 'mt-4 p-4 rounded-lg bg-green-500/20 border border-green-500/30 text-green-300';
-            formMessage.textContent = 'Ihr E-Mail-Client wurde geöffnet. Bitte senden Sie die vorbereitete E-Mail ab.';
-            formMessage.classList.remove('hidden');
-            
-            // Reset form
-            this.reset();
         });
     </script>
 </body>

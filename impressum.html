@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impressum - Volker Rosin</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
         }
     </script>
+    <script src="js/config-loader.js" defer></script>
+    <script src="js/components.js" defer></script>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-black via-gray-900 to-gray-950 text-white relative">
     <!-- Animated Background -->
@@ -46,13 +50,13 @@
                 <section>
                     <h2 class="text-2xl font-semibold text-blue-400 mb-4">Anbieter</h2>
                     <div class="text-gray-300 leading-relaxed">
-                        <p class="font-medium text-white">Volker Rosin</p>
-                        <p>Elektrotechniker, Planung MSR-Schaltanlagen</p>
+                        <p class="font-medium text-white" data-config="personal.name">Volker Rosin</p>
+                        <p data-config="personal.title">Elektrotechniker, Planung MSR-Schaltanlagen</p>
                         <p class="mt-4">
                             <strong class="text-white">Anschrift:</strong><br>
-                            [Straße und Hausnummer]<br>
-                            [PLZ] Bochum<br>
-                            Deutschland
+                            <span data-config="contact.address.street">[Straße und Hausnummer]</span><br>
+                            <span><span data-config="contact.address.postal">[PLZ]</span> <span data-config="contact.address.city">Bochum</span></span><br>
+                            <span data-config="contact.address.country">Deutschland</span>
                         </p>
                     </div>
                 </section>
@@ -62,11 +66,11 @@
                     <h2 class="text-2xl font-semibold text-blue-400 mb-4">Kontakt</h2>
                     <div class="text-gray-300 leading-relaxed">
                         <p>
-                            <strong class="text-white">E-Mail:</strong> 
-                            <a href="mailto:v.rosin@email.de" class="text-blue-400 hover:text-blue-300 transition-colors">v.rosin@email.de</a>
+                            <strong class="text-white">E-Mail:</strong>
+                            <a data-config="contact.email" class="text-blue-400 hover:text-blue-300 transition-colors">v.rosin@email.de</a>
                         </p>
                         <p>
-                            <strong class="text-white">Telefon:</strong> [Telefonnummer auf Anfrage]
+                            <strong class="text-white">Telefon:</strong> <span data-config="contact.phone">[Telefonnummer auf Anfrage]</span>
                         </p>
                     </div>
                 </section>
@@ -110,7 +114,7 @@
 
                 <!-- Letzte Aktualisierung -->
                 <section class="pt-8 border-t border-gray-700/50">
-                    <p class="text-gray-400 text-sm">
+                    <p class="text-gray-400 text-sm" data-config="site.lastUpdated">
                         Letzte Aktualisierung: Januar 2025
                     </p>
                 </section>
@@ -118,15 +122,6 @@
         </div>
     </div>
 
-    <footer class="mt-16 p-6 text-center text-gray-500 text-sm space-y-2">
-        <div>
-            <a href="kontakt.html" class="hover:text-gray-400 transition-colors">Kontakt</a>
-            <span class="mx-2">|</span>
-            <a href="impressum.html" class="hover:text-gray-400 transition-colors">Impressum</a>
-            <span class="mx-2">|</span>
-            <a href="datenschutz.html" class="hover:text-gray-400 transition-colors">Datenschutz</a>
-        </div>
-        <div>Powered by Tailwind CSS</div>
-    </footer>
+    <div id="footer-placeholder"></div>
 </body>
 </html>

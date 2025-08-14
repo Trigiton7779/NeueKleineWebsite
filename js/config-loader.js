@@ -61,7 +61,8 @@ class ConfigLoader {
 
   async loadConfig() {
     try {
-      const response = await fetch('./data/config.json', { cache: 'no-store' });
+      const configUrl = new URL('data/config.json', document.baseURI);
+      const response = await fetch(configUrl, { cache: 'no-store' });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
